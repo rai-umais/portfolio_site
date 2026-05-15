@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rai Muhammad Umais Kharal — Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <script>
+    // Immediate theme check to prevent flash
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Grain overlay -->
+  <div class="grain"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">RU<span class="accent">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <button class="theme-switch" id="themeToggle" aria-label="Toggle theme">
+          <span class="sun">☼</span>
+          <span class="moon">☾</span>
+        </button>
+      </li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">UMAIS</div>
+    <div class="hero-content">
+      <p class="hero-greeting reveal">Hello, I'm</p>
+      <h1 class="hero-name reveal">Rai Muhammad<br/><span class="name-accent">Umais Kharal</span></h1>
+      <p class="hero-tagline reveal">Software Engineer &nbsp;·&nbsp; AI Enthusiast &nbsp;·&nbsp; Building Systems from Scratch</p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <!-- Floating geometric shapes -->
+    <div class="geo geo-1"></div>
+    <div class="geo geo-2"></div>
+    <div class="geo geo-3"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label reveal">01 &mdash; About</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title">Who I Am</h2>
+          <p class="about-bio">
+            I'm a Sophomore at <strong>FAST NUCES</strong> and an aspiring software engineer focused on mastering the fundamentals of programming and artificial intelligence. I prefer building solutions <em>from the ground up</em> to develop a deeper understanding of how systems work.
+          </p>
+          <p class="about-bio">
+            With a growing interest in machine learning and problem-solving, I'm actively working on projects that challenge my logic and creativity.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">2nd</span>
+              <span class="stat-label">Year at FAST</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">ML</span>
+              <span class="stat-label">From Scratch</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">Logic</span>
+              <span class="stat-label">Building</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="avatar-card">
+            <div class="avatar-img-wrapper">
+              <img src="{{ url_for('static', filename='images/pth.jpeg') }}" alt="Rai Muhammad Umais Kharal" class="avatar-img"/>
+            </div>
+            <div class="avatar-ring ring-1"></div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="avatar-ring ring-3"></div>
+            <div class="avatar-corner corner-tl"></div>
+            <div class="avatar-corner corner-br"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label reveal">02 &mdash; Skills</div>
+      <h2 class="section-title reveal">Tech Stack</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">C++</span>
+            <span class="tag">Python</span>
+            <span class="tag tag-muted">Java (Basic)</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3>Core Strengths</h3>
+          <div class="skill-tags">
+            <span class="tag">Logic Building</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">OOP</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3>Machine Learning</h3>
+          <div class="skill-tags">
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Data Preprocessing</span>
+            <span class="tag">Gradient Descent</span>
+            <span class="tag">Models from Scratch</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3>Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-label reveal">03 &mdash; Projects</div>
+      <div class="projects-header reveal">
+        <h2 class="section-title">Selected Work</h2>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        {% if projects %}
+          {% for project in projects %}
+          <div class="project-card reveal">
+            <div class="project-num">{{ '%02d'|format(loop.index) }}</div>
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-desc">{{ project.description }}</p>
+            <div class="project-tech">
+              {% for t in project.tech %}
+              <span class="tech-badge">{{ t }}</span>
+              {% endfor %}
+            </div>
+            <div class="project-links">
+              {% if project.github %}
+              <a href="{{ project.github }}" target="_blank" class="project-link">Source Code →</a>
+              {% endif %}
+              {% if project.live %}
+              <a href="{{ project.live }}" target="_blank" class="project-link">Live Demo →</a>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        {% else %}
+          <div class="empty-projects reveal" id="emptyState">
+            <div class="empty-icon">◈</div>
+            <p>No projects showcased yet.</p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-label reveal">04 &mdash; Education</div>
+      <h2 class="section-title reveal">Academic Background</h2>
+      <div class="edu-timeline">
+        <div class="edu-card reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-body">
+            <span class="edu-year">2023 &mdash; Present</span>
+            <h3 class="edu-degree">BS Software Engineering</h3>
+            <p class="edu-uni">FAST National University of Computer and Emerging Sciences</p>
+            <span class="edu-badge">Undergraduate · Sophomore</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label reveal">05 &mdash; Contact</div>
+      <h2 class="section-title reveal">Let's Connect</h2>
+      <p class="contact-sub reveal">Open to collaborations, discussions, and new opportunities.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:raiumaiskharal@gmail.com" class="contact-card">
+          <span class="contact-icon">✉</span>
+          <div>
+            <span class="contact-type">Email</span>
+            <span class="contact-val">raiumaiskharal@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://github.com/rai-umais" target="_blank" class="contact-card">
+          <span class="contact-icon">⌥</span>
+          <div>
+            <span class="contact-type">GitHub</span>
+            <span class="contact-val">github.com/rai-umais</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/rai-umais-9aa927246/" target="_blank" class="contact-card">
+          <span class="contact-icon">◈</span>
+          <div>
+            <span class="contact-type">LinkedIn</span>
+            <span class="contact-val">rai-umais-9aa927246</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Crafted with intention &nbsp;·&nbsp; Rai Muhammad Umais Kharal &nbsp;·&nbsp; <span id="year"></span></p>
+  </footer>
+
+  <!-- End of Sections -->
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
