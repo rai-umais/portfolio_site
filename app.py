@@ -46,4 +46,7 @@ def index():
     return render_template('index.html', projects=STATIC_PROJECTS, is_admin=is_admin)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Use the port assigned by the environment (e.g., Railway, Heroku)
+    # Default to 5000 for local development
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
