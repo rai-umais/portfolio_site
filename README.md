@@ -1,56 +1,52 @@
 # Rai Muhammad Umais Kharal — Portfolio
 
-A Flask-powered personal portfolio website with earthy warm aesthetics.
+A premium, dark-themed static portfolio website deployed on **Vercel**.
 
-## Project Structure
+## 🗂 Project Structure
 
 ```
 portfolio/
-├── app.py                  # Flask application
-├── requirements.txt
-├── data/
-│   └── projects.json       # Auto-created when you add projects
-├── templates/
-│   └── index.html          # Main HTML template
-└── static/
-    ├── css/
-    │   └── style.css       # All styles
-    └── js/
-        └── main.js         # Animations + project CRUD
+├── index.html          # Main (and only) HTML page
+├── css/
+│   └── style.css       # All styles — dark/light theme, animations
+├── js/
+│   └── main.js         # Theme toggle, scroll reveals, nav logic
+├── images/
+│   └── pth.jpeg        # Profile photo
+├── vercel.json         # Vercel deployment config
+├── .gitignore          # Git ignore rules
+└── README.md           # This file
 ```
 
-## Setup & Run
+## 🚀 Deploy on Vercel
+
+1. Push this repo to GitHub
+2. Go to [vercel.com](https://vercel.com) → **New Project**
+3. Import the GitHub repository
+4. **Framework Preset**: select `Other` (no framework)
+5. Leave **Build Command** empty and **Output Directory** as `.`
+6. Click **Deploy**
+
+That's it — Vercel will serve `index.html` as the root page with all static assets.
+
+## 🛠 Local Development
 
 ```bash
-# 1. Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate        # Mac/Linux
-venv\Scripts\activate           # Windows
+# Any static server works. For example with Python:
+python -m http.server 8080
 
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Run the app
-python app.py
+# Then open http://localhost:8080
 ```
 
-Open http://127.0.0.1:5000 in your browser.
+## ✨ Features
 
-## Features
+- **Dark / Light theme** toggle with localStorage persistence
+- **Scroll-reveal animations** via IntersectionObserver
+- **Responsive design** — mobile nav with hamburger menu
+- **Glassmorphism** project cards with accent glow effects
+- **Premium typography** — Cormorant Garamond, Outfit, DM Mono
+- **Zero dependencies** — pure HTML, CSS, JS
 
-- Smooth scroll-reveal animations on every section
-- Animated hero with floating geometric shapes
-- Add / delete projects directly from the website (no code edits needed)
-- Projects persist in `data/projects.json`
-- Fully responsive (mobile hamburger menu)
-- Earthy warm color scheme: cream, brown, gold
+## 📄 License
 
-## Deploying to the Web
-
-To share your portfolio URL on your resume, deploy to one of:
-- **Render** (free): Connect GitHub repo → select Python/Flask
-- **Railway** (free tier): `railway up`
-- **Vercel** (with serverless adapter)
-- **PythonAnywhere** (free): Upload files via web interface
-
-For production, set `debug=False` in `app.py`.
+Personal portfolio — all rights reserved.

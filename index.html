@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rai Muhammad Umais Kharal — Portfolio</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+  <meta name="description" content="Portfolio of Rai Muhammad Umais Kharal — Software Engineer, AI Enthusiast, building systems from scratch. FAST NUCES Sophomore."/>
+  <meta name="author" content="Rai Muhammad Umais Kharal"/>
+  <meta name="keywords" content="Rai Umais, Software Engineer, Portfolio, AI, Machine Learning, FAST NUCES"/>
+  <meta property="og:title" content="Rai Muhammad Umais Kharal — Portfolio"/>
+  <meta property="og:description" content="Software Engineer · AI Enthusiast · Building Systems from Scratch"/>
+  <meta property="og:type" content="website"/>
+  <link rel="stylesheet" href="./css/style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -23,7 +29,7 @@
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <div class="nav-logo">RU<span class="accent">.</span></div>
+    <div class="nav-logo">RMU<span class="accent">.</span></div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -95,7 +101,7 @@
         <div class="about-visual reveal">
           <div class="avatar-card">
             <div class="avatar-img-wrapper">
-              <img src="{{ url_for('static', filename='images/pth.jpeg') }}" alt="Rai Muhammad Umais Kharal" class="avatar-img"/>
+              <img src="./images/pth.jpeg" alt="Rai Muhammad Umais Kharal" class="avatar-img"/>
             </div>
             <div class="avatar-ring ring-1"></div>
             <div class="avatar-ring ring-2"></div>
@@ -166,33 +172,63 @@
       </div>
 
       <div class="projects-grid" id="projectsGrid">
-        {% if projects %}
-          {% for project in projects %}
-          <div class="project-card reveal">
-            <div class="project-num">{{ '%02d'|format(loop.index) }}</div>
-            <h3 class="project-title">{{ project.title }}</h3>
-            <p class="project-desc">{{ project.description }}</p>
-            <div class="project-tech">
-              {% for t in project.tech %}
-              <span class="tech-badge">{{ t }}</span>
-              {% endfor %}
-            </div>
-            <div class="project-links">
-              {% if project.github %}
-              <a href="{{ project.github }}" target="_blank" class="project-link">Source Code →</a>
-              {% endif %}
-              {% if project.live %}
-              <a href="{{ project.live }}" target="_blank" class="project-link">Live Demo →</a>
-              {% endif %}
-            </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">01</div>
+          <h3 class="project-title">ML Model from Scratch</h3>
+          <p class="project-desc">Built core Machine Learning algorithms like Linear Regression and Gradient Descent purely from scratch using NumPy to deeply understand their mathematical foundations.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">NumPy</span>
+            <span class="tech-badge">Linear Algebra</span>
           </div>
-          {% endfor %}
-        {% else %}
-          <div class="empty-projects reveal" id="emptyState">
-            <div class="empty-icon">◈</div>
-            <p>No projects showcased yet.</p>
+          <div class="project-links">
+            <a href="https://github.com/rai-umais/Machine-Learning-Practice-and-Problems" target="_blank" class="project-link">Source Code →</a>
           </div>
-        {% endif %}
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">02</div>
+          <h3 class="project-title">Collabify</h3>
+          <p class="project-desc">A Blend of Upwork and Jira, where the Clients and Freelancers interact, build and manage project flow, and Admin manages the platform.</p>
+          <div class="project-tech">
+            <span class="tech-badge">JAVA - Spring_boot</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Collabify-Project/Kollabify" target="_blank" class="project-link">Source Code →</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">03</div>
+          <h3 class="project-title">QR-Attendance System</h3>
+          <p class="project-desc">A fast, robust and proxy free QR based attendance system, where the QR refreshes every 25 second and the students can seamlessly mark there attendance in a few seconds. Only requirement: A good internet.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/rai-umais/QR_Automated_Attendance_System" target="_blank" class="project-link">Source Code →</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">04</div>
+          <h3 class="project-title">VORTX Game Store</h3>
+          <p class="project-desc">Built a functional Gaming marketplace, where you can upload a game and check the ratings, find the best match for you, see the top trending games and order one. Lets you experience a market with all types of games and no restrictions.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Node JS</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">MSSQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/rai-umais/Machine-Learning-Practice-and-Problems" target="_blank" class="project-link">Source Code →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -255,6 +291,6 @@
 
   <!-- End of Sections -->
 
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>

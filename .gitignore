@@ -1,4 +1,26 @@
+# Python / Flask (legacy — no longer needed)
 /PT_ENV
 __pycache__/
 *.pyc
 *.pyo
+*.egg-info/
+dist/
+build/
+
+# Old Flask structure (kept locally as reference, excluded from deploy)
+/static/
+/templates/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Vercel
+.vercel/
+
+# Node (if added later)
+node_modules/
