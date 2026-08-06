@@ -18,16 +18,8 @@ portfolio/
 └── README.md           # This file
 ```
 
-## 🚀 Deploy on Vercel
-
-1. Push this repo to GitHub
-2. Go to [vercel.com](https://vercel.com) → **New Project**
-3. Import the GitHub repository
-4. **Framework Preset**: select `Other` (no framework)
-5. Leave **Build Command** empty and **Output Directory** as `.`
-6. Click **Deploy**
-
-That's it — Vercel will serve `index.html` as the root page with all static assets.
+## **Run it on your system**:
+Click on the link here: https://i-am-rai.vercel.app/
 
 ## 🛠 Local Development
 
@@ -38,7 +30,7 @@ python -m http.server 8080
 # Then open http://localhost:8080
 ```
 
-## ✨ Features
+## Features
 
 - **Dark / Light theme** toggle with localStorage persistence
 - **Scroll-reveal animations** via IntersectionObserver
