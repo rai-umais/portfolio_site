@@ -1,21 +1,21 @@
 # Rai Muhammad Umais — Portfolio 2026
 
 A modern, high-performance static portfolio website deployed on **Vercel**.
-Refreshed for 2026 with a deep-navy identity, single typed data architecture, WCAG AA accessibility, and real production case studies.
+Designed with a warm editorial paper-and-ink aesthetic, single typed data architecture, WCAG AA accessibility, and real production case studies.
 
 ## 🗂 Project Structure
 
 ```text
 portfolio/
 ├── index.html                     # Semantic HTML5 markup & SEO meta tags
-├── favicon.svg                    # SVG Favicon
+├── favicon.svg                    # SVG Favicon (Warm Paper & Forest Green)
 ├── Rai_Muhammad_Umais_CV_.pdf     # Current Resume PDF (Single Source of Truth)
 ├── data/
 │   └── portfolio.js               # Single typed data source of truth (edit here!)
 ├── css/
-│   └── style.css                  # Modern navy design system (dark/light, WCAG AA)
+│   └── style.css                  # Warm editorial design system (Paper & Ink, WCAG AA)
 ├── js/
-│   └── main.js                    # Hydration, theme toggle, mobile drawer, reveals
+│   └── main.js                    # Hydration, mobile drawer, reveals
 ├── images/
 │   └── pth.jpeg                   # Profile portrait
 ├── vercel.json                    # Vercel deployment configuration
@@ -47,16 +47,20 @@ To add or update projects, experiences, skills, achievements, or contact links:
 3. Save the file.
 4. Refresh your browser — the website will automatically hydrate with your new data without requiring manual HTML editing.
 
-## ✨ 2026 Features & Improvements
+## ✨ Features & Architecture
 
+- **Warm Editorial Aesthetic**: Calm, printed-paper feel with a warm off-white background (`#F6F1E7`), ivory surfaces (`#FBF8F2`), warm charcoal ink typography (`#2A2622`), thin warm borders (`#D9D0BF`), and a restrained forest green accent (`#265440`).
 - **Single Typed Data Architecture**: Complete data separation in `data/portfolio.js` for single-point editing.
-- **Production Systems Shipped**: Mini case studies for real client systems (**Maktab Multi-Tenant ERP SaaS**, **BlueBells School System & AI Assistant**, **Furniture Store Storefront & Admin**).
+- **Featured Systems & Case Studies**:
+  - **Maktab: Multi-Tenant School ERP / Portal (SaaS)** (Live in Production)
+  - **Collabify: Full-Stack Project Management & Freelance Marketplace** (React 18, Spring Boot 3, PostgreSQL, WebSockets)
+  - **BlueBells School System: Deployment, Website & AI Assistant** (Live in Production)
+  - **Furniture Store Website with Admin Backend** (Live Client Project)
+- **Focused Other Projects**: QR Attendance System, Expense Tracker, Email Sender, and VORTX Gaming Store (with direct verified GitHub links).
 - **Honest Skill Categorization**: Clear separation between production-tested tools and AI technologies currently in active implementation.
-- **Deep Navy Design System**: Professional, calm aesthetic with deep navy base, slate surfaces, off-white typography, and restrained sky accent.
-- **WCAG AA Compliant**: All text and interactive button states pass contrast standards in both dark and light modes.
+- **WCAG AA Compliant**: Every color pair tested and verified against WCAG AA/AAA standards.
 - **Accessible & Responsive**: Fully responsive from 360px up, keyboard navigable with visible focus rings, and respects `prefers-reduced-motion`.
-- **CV Download**: Direct download button serving `Rai_Muhammad_Umais_CV_.pdf`.
-- **Zero Heavy Dependencies**: Pure semantic HTML5, vanilla modern CSS3, and vanilla ES6+ JS for maximum speed and instant loading.
+- **Zero Heavy Dependencies**: Pure semantic HTML5, vanilla modern CSS3, and vanilla ES6+ JS for instant loading.
 
 ## 📄 License
 

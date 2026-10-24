@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rai Muhammad Umais — Full-Stack & AI Developer | Systems Shipped</title>
   <meta name="description"
-    content="Portfolio of Rai Muhammad Umais — Software Engineering student at FAST-NUCES Lahore (5th semester, grad 2028). Solo builder of Maktab (multi-tenant school ERP) and production systems for real clients." />
+    content="Portfolio of Rai Muhammad Umais — Software Engineering student at FAST-NUCES Lahore (5th semester, grad 2028). Solo builder of Maktab (multi-tenant school ERP), Collabify, and production systems for real clients." />
   <meta name="author" content="Rai Muhammad Umais" />
   <meta name="keywords"
-    content="Rai Muhammad Umais, Rai Umais, Full-Stack Developer, AI Developer, FAST-NUCES, Maktab, Next.js, FastAPI, PostgreSQL, RAG, Software Engineer Lahore Pakistan" />
+    content="Rai Muhammad Umais, Rai Umais, Full-Stack Developer, AI Developer, FAST-NUCES, Maktab, Collabify, Next.js, Spring Boot, FastAPI, PostgreSQL, RAG, Software Engineer Lahore Pakistan" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Facebook -->
@@ -17,20 +17,20 @@
   <meta property="og:url" content="https://raiworks.vercel.app/" />
   <meta property="og:title" content="Rai Muhammad Umais — Full-Stack & AI Developer" />
   <meta property="og:description"
-    content="Software Engineering student designing, building, and deploying production software for real clients. Founder & Lead Engineer of Maktab (multi-tenant school SaaS)." />
+    content="Software Engineering student designing, building, and deploying production software for real clients. Founder & Lead Engineer of Maktab and full-stack systems." />
   <meta property="og:image" content="./images/pth.jpeg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rai Muhammad Umais — Full-Stack & AI Developer" />
   <meta name="twitter:description"
-    content="Software Engineering student designing, building, and deploying production software for real clients. Founder & Lead Engineer of Maktab (multi-tenant school SaaS)." />
+    content="Software Engineering student designing, building, and deploying production software for real clients. Founder & Lead Engineer of Maktab and full-stack systems." />
   <meta name="twitter:image" content="./images/pth.jpeg" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono (Only 2 families) -->
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -39,18 +39,10 @@
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="./css/style.css" />
-
-  <!-- Prevent Theme Flash -->
-  <script>
-    (function () {
-      const savedTheme = localStorage.getItem('theme') || 'dark';
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    })();
-  </script>
 </head>
 
 <body>
-  <!-- Non-intrusive ambient grain overlay -->
+  <!-- Non-intrusive ambient paper grain overlay -->
   <div class="grain-overlay" aria-hidden="true"></div>
 
   <!-- NAVIGATION -->
@@ -81,27 +73,6 @@
             </svg>
             <span>Resume</span>
           </a>
-
-          <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle color theme">
-            <!-- Sun icon for light toggle -->
-            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <!-- Moon icon for dark toggle -->
-            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </button>
 
           <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation drawer"
             aria-expanded="false" aria-controls="navLinks">
@@ -180,7 +151,8 @@
                 website with a multilingual (English, Urdu, Roman Urdu) RAG chatbot.
               </p>
               <p class="about-bio">
-                I am actively seeking a full-time full-stack or AI engineering role at a Pakistani company.
+                I am actively seeking a full-time full-stack or AI engineering role at a forward-thinking Pakistani
+                company.
               </p>
             </div>
 
@@ -219,15 +191,15 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">02 — Systems Shipped</span>
-          <h2 class="section-title">Production &amp; Client Software</h2>
+          <h2 class="section-title">Production &amp; Featured Platforms</h2>
           <p class="section-subtitle">
-            Real systems architected, deployed to production, and actively serving real users and clients.
+            Real systems architected, deployed, and built to solve production workflows for clients and teams.
           </p>
         </div>
 
         <!-- Populated via data/portfolio.js -->
         <div class="featured-grid" id="featuredProjectsGrid">
-          <!-- Fallback semantic markup hydrated by JavaScript -->
+          <!-- Maktab -->
           <article class="case-study-card reveal">
             <div class="card-header">
               <div class="card-meta">
@@ -241,31 +213,55 @@
             <div class="card-body">
               <div class="case-block">
                 <h4 class="block-label">Problem Solved</h4>
-                <p class="block-text">K-12 private schools require dedicated subdomains and customized administration on
-                  a shared, cost-efficient infrastructure.</p>
+                <p class="block-text">K-12 private schools struggle with fragmented administration and high software costs, requiring unified management on individual subdomains over a secure shared infrastructure.</p>
               </div>
               <div class="case-block">
-                <h4 class="block-label">My Role &amp; Architecture</h4>
-                <p class="block-text role-highlight">Designed, built, and deployed solo a multi-tenant ERP platform
-                  between May and August 2026; onboarded first client within a week of completion.</p>
+                <h4 class="block-label">Role &amp; Engineering Implementation</h4>
+                <p class="block-text role-highlight">Founder &amp; Lead Engineer — Designed, built, and deployed solo end-to-end between May and August 2026; onboarded first client within a week of completion.</p>
               </div>
               <div class="case-block">
-                <h4 class="block-label">Production Stack</h4>
+                <h4 class="block-label">Tech Stack</h4>
                 <div class="tech-tags">
-                  <span class="tech-tag">FastAPI</span><span class="tech-tag">PostgreSQL</span><span
-                    class="tech-tag">Redis</span><span class="tech-tag">Celery</span><span
-                    class="tech-tag">Next.js</span><span class="tech-tag">TypeScript</span><span
-                    class="tech-tag">Tailwind CSS</span><span class="tech-tag">Docker</span><span
-                    class="tech-tag">Hetzner VPS</span><span class="tech-tag">Cloudflare R2</span>
+                  <span class="tech-tag">FastAPI</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Redis</span><span class="tech-tag">Celery</span><span class="tech-tag">Next.js</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Docker</span><span class="tech-tag">Hetzner VPS</span><span class="tech-tag">Cloudflare R2</span>
                 </div>
               </div>
             </div>
             <div class="card-footer">
               <div class="project-actions">
-                <a href="https://maktab.cloud" target="_blank" rel="noopener noreferrer" class="btn-link">Platform
-                  →</a>
-                <a href="https://know.maktab.cloud" target="_blank" rel="noopener noreferrer"
-                  class="btn-link">Documentation →</a>
+                <a href="https://maktab.cloud" target="_blank" rel="noopener noreferrer" class="btn-link">Platform →</a>
+                <a href="https://know.maktab.cloud" target="_blank" rel="noopener noreferrer" class="btn-link">Knowledge Base →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Collabify -->
+          <article class="case-study-card reveal">
+            <div class="card-header">
+              <div class="card-meta">
+                <span class="badge-status"><span class="dot-live" aria-hidden="true"></span>Completed Full-Stack</span>
+                <span class="badge-type">Marketplace &amp; Agile Workspace</span>
+                <span class="badge-period">Completed</span>
+              </div>
+              <h3 class="card-title">Collabify</h3>
+              <p class="card-subtitle">Full-Stack Project Management &amp; Freelance Marketplace</p>
+            </div>
+            <div class="case-block">
+              <h4 class="block-label">Problem Solved</h4>
+              <p class="block-text">Traditional freelance hiring and project execution are isolated across separate tools, creating communication gaps and project tracking friction.</p>
+            </div>
+            <div class="case-block">
+              <h4 class="block-label">Role &amp; Engineering Implementation</h4>
+              <p class="block-text role-highlight">Full-Stack Engineer — Built a unified platform blending Upwork and Jira capabilities where clients and freelancers interact, build, and manage project workflows, backed by an admin control room.</p>
+            </div>
+            <div class="case-block">
+              <h4 class="block-label">Tech Stack</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">Java 17</span><span class="tech-tag">Spring Boot 3</span><span class="tech-tag">React 18</span><span class="tech-tag">Vite</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">WebSockets</span><span class="tech-tag">Cloudinary</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="project-actions">
+                <a href="https://github.com/Collabify-Project/Collabify" target="_blank" rel="noopener noreferrer" class="btn-link">GitHub Repository →</a>
               </div>
             </div>
           </article>
@@ -446,7 +442,7 @@
     <div class="container">
       <div class="footer-content">
         <p>© <span id="year">2026</span> Rai Muhammad Umais. All rights reserved.</p>
-        <p class="footer-mono">Crafted with semantic HTML5, modern CSS3 &amp; vanilla JS</p>
+        <p class="footer-mono">Warm Editorial Edition · Printed Paper &amp; Ink</p>
       </div>
     </div>
   </footer>

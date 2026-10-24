@@ -1,7 +1,8 @@
 /**
- * Rai Muhammad Umais — 2026 Portfolio Scripts
- * Drives theme switching, dynamic content hydration from portfolioData,
- * navigation scroll effects, accessible mobile drawer, and subtle animations.
+ * Rai Muhammad Umais — Portfolio Scripts
+ * Editorial Warm Theme (Paper & Ink)
+ * Hydrates content from portfolioData, handles navigation and mobile drawer,
+ * and manages subtle scroll reveals.
  */
 
 (function () {
@@ -30,13 +31,6 @@
       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
       <polyline points="15 3 21 3 21 9"></polyline>
       <line x1="10" y1="14" x2="21" y2="3"></line>
-    </svg>`;
-
-  const downloadIcon = `
-    <svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-      <polyline points="7 10 12 15 17 10"></polyline>
-      <line x1="12" y1="15" x2="12" y2="3"></line>
     </svg>`;
 
   // ---- 3. Hydrate Personal & Hero Information ----
@@ -93,13 +87,13 @@
   if (featuredGrid && Array.isArray(data.featuredProjects)) {
     featuredGrid.innerHTML = data.featuredProjects
       .map((proj, idx) => {
-        const stackBadges = proj.stack
-          .map(s => `<span class="tech-tag">${escapeHTML(s)}</span>`)
-          .join('');
+        const stackBadges = proj.stack && proj.stack.length
+          ? proj.stack.map(s => `<span class="tech-tag">${escapeHTML(s)}</span>`).join('')
+          : '';
 
-        const highlightsList = proj.highlights
-          .map(h => `<li>${escapeHTML(h)}</li>`)
-          .join('');
+        const highlightsList = proj.highlights && proj.highlights.length
+          ? proj.highlights.map(h => `<li>${escapeHTML(h)}</li>`).join('')
+          : '';
 
         const linksList = proj.links && proj.links.length
           ? proj.links.map(l => `
@@ -132,19 +126,19 @@
               </div>
 
               <div class="case-block">
-                <h4 class="block-label">My Role & Architecture</h4>
+                <h4 class="block-label">Role &amp; Engineering Implementation</h4>
                 <p class="block-text role-highlight">${escapeHTML(proj.myRole)}</p>
-                <ul class="case-highlights">
-                  ${highlightsList}
-                </ul>
+                ${highlightsList ? `<ul class="case-highlights">${highlightsList}</ul>` : ''}
               </div>
 
-              <div class="case-block">
-                <h4 class="block-label">Production Stack</h4>
-                <div class="tech-tags">
-                  ${stackBadges}
+              ${stackBadges ? `
+                <div class="case-block">
+                  <h4 class="block-label">Tech Stack</h4>
+                  <div class="tech-tags">
+                    ${stackBadges}
+                  </div>
                 </div>
-              </div>
+              ` : ''}
             </div>
 
             ${linksList ? `
@@ -259,7 +253,7 @@
       .join('');
   }
 
-  // ---- 10. Hydrate Contact Links & Direct Actions ----
+  // ---- 10. Hydrate Contact Links ----
   const contactLinksContainer = document.getElementById('contactLinksContainer');
   if (contactLinksContainer && data.contact) {
     contactLinksContainer.innerHTML = `
@@ -320,30 +314,7 @@
     `;
   }
 
-  // ---- 11. Theme Switcher ----
-  const themeToggle = document.getElementById('themeToggle');
-  const html = document.documentElement;
-
-  if (themeToggle) {
-    const updateThemeIcon = (theme) => {
-      const isDark = theme === 'dark';
-      themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-      themeToggle.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-    };
-
-    const initialTheme = html.getAttribute('data-theme') || 'dark';
-    updateThemeIcon(initialTheme);
-
-    themeToggle.addEventListener('click', () => {
-      const current = html.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      updateThemeIcon(next);
-    });
-  }
-
-  // ---- 12. Navigation & Sticky Blur ----
+  // ---- 11. Navigation & Sticky Scroll ----
   const nav = document.getElementById('nav');
   if (nav) {
     const handleScroll = () => {
@@ -369,7 +340,7 @@
     });
   }
 
-  // ---- 13. Active Navigation Observer ----
+  // ---- 12. Active Navigation Observer ----
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
@@ -393,7 +364,7 @@
     sections.forEach(s => observer.observe(s));
   }
 
-  // ---- 14. Smooth Scroll for Anchor Links ----
+  // ---- 13. Smooth Scroll for Anchor Links ----
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
@@ -411,7 +382,7 @@
     });
   });
 
-  // ---- 15. Subtle Scroll Reveal Animations (prefers-reduced-motion safe) ----
+  // ---- 14. Subtle Scroll Reveal Animations (prefers-reduced-motion safe) ----
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealElements = document.querySelectorAll('.reveal');
 
@@ -432,7 +403,7 @@
     revealElements.forEach(el => el.classList.add('visible'));
   }
 
-  // ---- 16. Dynamic Year in Footer ----
+  // ---- 15. Dynamic Year in Footer ----
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());

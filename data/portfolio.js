@@ -1,6 +1,6 @@
 /**
  * Portfolio Data Source of Truth for 2026
- * Sourced directly from Rai Muhammad Umais's CV.
+ * Sourced directly from Rai Muhammad Umais's CV and verified project repositories.
  *
  * @typedef {Object} ProjectLink
  * @property {string} label
@@ -49,7 +49,7 @@ const portfolioData = {
     location: "Sheikhupura, Punjab, Pakistan (Open to Lahore)",
     status: {
       isOpenToWork: true,
-      text: "Seeking full-time Full-Stack or AI Engineering roles (Pakistani companies / Lahore / Remote)"
+      text: "Seeking full-time Full-Stack or AI Engineering roles (Pakistan / Remote)"
     },
     aboutParagraphs: [
       "I am a Software Engineering student at FAST-NUCES Lahore (graduating July 2028, currently in 5th semester) who designs, builds, deploys, and supports production software for real clients.",
@@ -84,6 +84,25 @@ const portfolioData = {
       links: [
         { label: "Platform", url: "https://maktab.cloud" },
         { label: "Knowledge Base", url: "https://know.maktab.cloud" }
+      ]
+    },
+    {
+      title: "Collabify",
+      subtitle: "Full-Stack Project Management & Freelance Marketplace",
+      period: "Completed",
+      status: "Completed Full-Stack Platform",
+      type: "Marketplace & Agile Workspace",
+      problem: "Traditional freelance hiring and project execution are isolated across separate tools, creating communication gaps and project tracking friction.",
+      myRole: "Full-Stack Engineer — Built a unified platform blending Upwork and Jira capabilities where clients and freelancers interact, build, and manage project workflows, backed by an admin control room.",
+      highlights: [
+        "Engineered decoupled client-server architecture with React 18, Vite, and Java Spring Boot 3.x.",
+        "Built dynamic portfolio showcases with filtering, strategic search algorithms, and interactive Kanban boards governed by model-level state transitions.",
+        "Implemented real-time WebSocket group chat with profanity/length validation pipelines and an automated notification engine.",
+        "Delivered centralized admin control room with analytical reports, system diagnostics, and thread-safe session tracking."
+      ],
+      stack: ["Java 17", "Spring Boot 3", "React 18", "Vite", "Tailwind CSS", "PostgreSQL", "WebSockets", "Cloudinary"],
+      links: [
+        { label: "GitHub Repository", url: "https://github.com/Collabify-Project/Collabify" }
       ]
     },
     {
@@ -130,20 +149,24 @@ const portfolioData = {
       desc: "Fast, automated proxy-resistant attendance tracking system built with Python.",
       stack: ["Python", "Flask", "PostgreSQL"],
       links: [
-        { label: "GitHub", url: "https://github.com/rai-umais/QR_Automated_Attendance_System" }
+        { label: "GitHub Repository", url: "https://github.com/rai-umais/QR_Automated_Attendance_System" }
       ]
     },
     {
       title: "Expense Tracker",
       desc: "Financial management tool featuring month-wise and category-wise budget analytics and expense tracking.",
       stack: ["Python", "Budget Analytics"],
-      links: []
+      links: [
+        { label: "GitHub Repository", url: "https://github.com/rai-umais/expense_tracker" }
+      ]
     },
     {
       title: "Email Sender Web App",
       desc: "Automated communication utility web application built with Python, Flask, and SMTP protocol.",
       stack: ["Python", "Flask", "SMTP"],
-      links: []
+      links: [
+        { label: "GitHub Repository", url: "https://github.com/rai-umais/email_sender_using_Flask" }
+      ]
     },
     {
       title: "VORTX Gaming Store",
@@ -161,11 +184,11 @@ const portfolioData = {
       },
       {
         category: "Backend & Databases",
-        items: ["FastAPI", "Flask", "REST APIs", "PostgreSQL", "MSSQL", "Redis", "Celery"]
+        items: ["FastAPI", "Spring Boot", "Flask", "REST APIs", "PostgreSQL", "MSSQL", "Redis", "Celery"]
       },
       {
         category: "Frontend",
-        items: ["Next.js", "TypeScript", "Tailwind CSS"]
+        items: ["Next.js", "React", "TypeScript", "Tailwind CSS"]
       },
       {
         category: "DevOps & Deployment",
