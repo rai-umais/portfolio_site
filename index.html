@@ -1,308 +1,461 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rai Muhammad Umais Kharal — Portfolio</title>
-  <meta name="description" content="Portfolio of Rai Muhammad Umais Kharal — Software Engineer, AI Enthusiast, building systems from scratch. FAST NUCES Sophomore."/>
-  <meta name="author" content="Rai Muhammad Umais Kharal"/>
-  <meta name="keywords" content="Rai Umais, Software Engineer, Portfolio, AI, Machine Learning, FAST NUCES"/>
-  <meta property="og:title" content="Rai Muhammad Umais Kharal — Portfolio"/>
-  <meta property="og:description" content="Software Engineer · AI Enthusiast · Building Systems from Scratch"/>
-  <meta property="og:type" content="website"/>
-  <link rel="stylesheet" href="./css/style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rai Muhammad Umais — Full-Stack & AI Developer | Systems Shipped</title>
+  <meta name="description"
+    content="Portfolio of Rai Muhammad Umais — Software Engineering student at FAST-NUCES Lahore (5th semester, grad 2028). Solo builder of Maktab (multi-tenant school ERP) and production systems for real clients." />
+  <meta name="author" content="Rai Muhammad Umais" />
+  <meta name="keywords"
+    content="Rai Muhammad Umais, Rai Umais, Full-Stack Developer, AI Developer, FAST-NUCES, Maktab, Next.js, FastAPI, PostgreSQL, RAG, Software Engineer Lahore Pakistan" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://raiworks.vercel.app/" />
+  <meta property="og:title" content="Rai Muhammad Umais — Full-Stack & AI Developer" />
+  <meta property="og:description"
+    content="Software Engineering student designing, building, and deploying production software for real clients. Founder & Lead Engineer of Maktab (multi-tenant school SaaS)." />
+  <meta property="og:image" content="./images/pth.jpeg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rai Muhammad Umais — Full-Stack & AI Developer" />
+  <meta name="twitter:description"
+    content="Software Engineering student designing, building, and deploying production software for real clients. Founder & Lead Engineer of Maktab (multi-tenant school SaaS)." />
+  <meta name="twitter:image" content="./images/pth.jpeg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono (Only 2 families) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Prevent Theme Flash -->
   <script>
-    // Immediate theme check to prevent flash
-    (function() {
+    (function () {
       const savedTheme = localStorage.getItem('theme') || 'dark';
       document.documentElement.setAttribute('data-theme', savedTheme);
     })();
   </script>
 </head>
+
 <body>
+  <!-- Non-intrusive ambient grain overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
 
-  <!-- Grain overlay -->
-  <div class="grain"></div>
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="nav" id="nav" aria-label="Main Navigation">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo" aria-label="Rai Muhammad Umais Home">
+          <span>RMU</span><span class="accent">.</span>
+        </a>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-logo">RMU<span class="accent">.</span></div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li>
-        <button class="theme-switch" id="themeToggle" aria-label="Toggle theme">
-          <span class="sun">☼</span>
-          <span class="moon">☾</span>
-        </button>
-      </li>
-    </ul>
-    <div class="nav-toggle" id="navToggle">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#systems">Systems Shipped</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg-text">UMAIS</div>
-    <div class="hero-content">
-      <p class="hero-greeting reveal">Hello, I'm</p>
-      <h1 class="hero-name reveal">Rai Muhammad<br/><span class="name-accent">Umais Kharal</span></h1>
-      <p class="hero-tagline reveal">Software Engineer &nbsp;·&nbsp; AI Enthusiast &nbsp;·&nbsp; Building Systems from Scratch</p>
-      <div class="hero-cta reveal">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="#contact" class="btn-outline">Get in Touch</a>
+        <div class="nav-actions">
+          <a href="./Rai_Muhammad_Umais_CV_.pdf" class="btn-secondary btn-sm" download="Rai_Muhammad_Umais_CV.pdf"
+            target="_blank" rel="noopener noreferrer">
+            <svg class="icon-inline" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Resume</span>
+          </a>
+
+          <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle color theme">
+            <!-- Sun icon for light toggle -->
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon icon for dark toggle -->
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation drawer"
+            aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <div class="scroll-line"></div>
-    </div>
-    <!-- Floating geometric shapes -->
-    <div class="geo geo-1"></div>
-    <div class="geo geo-2"></div>
-    <div class="geo geo-3"></div>
-  </section>
+    </nav>
+  </header>
 
-  <!-- ABOUT -->
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="section-label reveal">01 &mdash; About</div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <h2 class="section-title">Who I Am</h2>
-          <p class="about-bio">
-            I'm a Sophomore at <strong>FAST NUCES</strong> and an aspiring software engineer focused on mastering the fundamentals of programming and artificial intelligence. I prefer building solutions <em>from the ground up</em> to develop a deeper understanding of how systems work.
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-layout">
+          <!-- Availability Badge -->
+          <div class="status-pill reveal" id="heroBadge">
+            <span class="status-pulse" aria-hidden="true"></span>
+            <span>Seeking full-time Full-Stack or AI Engineering roles (Pakistan / Remote)</span>
+          </div>
+
+          <h1 class="hero-name reveal" id="heroName">Rai Muhammad Umais</h1>
+          <p class="hero-headline reveal" id="heroHeadline">Full-Stack &amp; AI Developer</p>
+          <p class="hero-positioning reveal" id="heroPositioning">
+            Software Engineering student designing, building, and deploying production software for real clients.
           </p>
-          <p class="about-bio">
-            With a growing interest in machine learning and problem-solving, I'm actively working on projects that challenge my logic and creativity.
+          <p class="hero-supporting reveal" id="heroSupporting">
+            Founder &amp; Lead Engineer of Maktab (multi-tenant school ERP). Currently in 5th semester at FAST-NUCES
+            Lahore (graduating July 2028).
           </p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-num">2nd</span>
-              <span class="stat-label">Year at FAST</span>
+
+          <div class="hero-cta-group reveal">
+            <a href="#systems" class="btn-primary">
+              <span>View Shipped Systems</span>
+              <svg class="icon-inline" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn-secondary">Get in Touch</a>
+            <a href="./Rai_Muhammad_Umais_CV_.pdf" class="btn-secondary" download="Rai_Muhammad_Umais_CV.pdf"
+              target="_blank" rel="noopener noreferrer">
+              <svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section section-alt about" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">01 — About</span>
+          <h2 class="section-title">Professional Background</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <div id="aboutBioContainer">
+              <p class="about-bio">
+                I am a Software Engineering student at <strong>FAST-NUCES Lahore</strong> (graduating July 2028,
+                currently in 5th semester) who designs, builds, deploys, and supports production software for real
+                clients.
+              </p>
+              <p class="about-bio">
+                I built <strong>Maktab</strong>, a multi-tenant school ERP, solo between May and August 2026, and
+                onboarded its first live client within a week of completion. I am currently extending that client's
+                website with a multilingual (English, Urdu, Roman Urdu) RAG chatbot.
+              </p>
+              <p class="about-bio">
+                I am actively seeking a full-time full-stack or AI engineering role at a Pakistani company.
+              </p>
             </div>
-            <div class="stat">
-              <span class="stat-num">ML</span>
-              <span class="stat-label">From Scratch</span>
+
+            <div class="about-stats" id="aboutStatsContainer">
+              <div class="stat-card">
+                <span class="stat-value">5th Sem</span>
+                <span class="stat-label">Current Term</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">July 2028</span>
+                <span class="stat-label">Graduation</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">Live SaaS</span>
+                <span class="stat-label">Shipped Platform</span>
+              </div>
             </div>
-            <div class="stat">
-              <span class="stat-num">Logic</span>
-              <span class="stat-label">Building</span>
+          </div>
+
+          <div class="about-visual reveal">
+            <div class="about-avatar-card">
+              <img src="./images/pth.jpeg" alt="Rai Muhammad Umais portrait" class="about-avatar-img" width="340"
+                height="380" loading="lazy" />
+              <div class="avatar-caption">
+                <span>FAST-NUCES, Lahore</span>
+                <span>SE Student</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="about-visual reveal">
-          <div class="avatar-card">
-            <div class="avatar-img-wrapper">
-              <img src="./images/pth.jpeg" alt="Rai Muhammad Umais Kharal" class="avatar-img"/>
+      </div>
+    </section>
+
+    <!-- SYSTEMS SHIPPED & FEATURED CASE STUDIES -->
+    <section class="section systems" id="systems">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">02 — Systems Shipped</span>
+          <h2 class="section-title">Production &amp; Client Software</h2>
+          <p class="section-subtitle">
+            Real systems architected, deployed to production, and actively serving real users and clients.
+          </p>
+        </div>
+
+        <!-- Populated via data/portfolio.js -->
+        <div class="featured-grid" id="featuredProjectsGrid">
+          <!-- Fallback semantic markup hydrated by JavaScript -->
+          <article class="case-study-card reveal">
+            <div class="card-header">
+              <div class="card-meta">
+                <span class="badge-status"><span class="dot-live" aria-hidden="true"></span>Live in Production</span>
+                <span class="badge-type">Multi-Tenant SaaS Platform</span>
+                <span class="badge-period">May 2026 – Present</span>
+              </div>
+              <h3 class="card-title">Maktab: Multi-Tenant School ERP / Portal (SaaS)</h3>
+              <p class="card-subtitle">Founder &amp; Lead Engineer</p>
             </div>
-            <div class="avatar-ring ring-1"></div>
-            <div class="avatar-ring ring-2"></div>
-            <div class="avatar-ring ring-3"></div>
-            <div class="avatar-corner corner-tl"></div>
-            <div class="avatar-corner corner-br"></div>
+            <div class="card-body">
+              <div class="case-block">
+                <h4 class="block-label">Problem Solved</h4>
+                <p class="block-text">K-12 private schools require dedicated subdomains and customized administration on
+                  a shared, cost-efficient infrastructure.</p>
+              </div>
+              <div class="case-block">
+                <h4 class="block-label">My Role &amp; Architecture</h4>
+                <p class="block-text role-highlight">Designed, built, and deployed solo a multi-tenant ERP platform
+                  between May and August 2026; onboarded first client within a week of completion.</p>
+              </div>
+              <div class="case-block">
+                <h4 class="block-label">Production Stack</h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">FastAPI</span><span class="tech-tag">PostgreSQL</span><span
+                    class="tech-tag">Redis</span><span class="tech-tag">Celery</span><span
+                    class="tech-tag">Next.js</span><span class="tech-tag">TypeScript</span><span
+                    class="tech-tag">Tailwind CSS</span><span class="tech-tag">Docker</span><span
+                    class="tech-tag">Hetzner VPS</span><span class="tech-tag">Cloudflare R2</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="project-actions">
+                <a href="https://maktab.cloud" target="_blank" rel="noopener noreferrer" class="btn-link">Platform
+                  →</a>
+                <a href="https://know.maktab.cloud" target="_blank" rel="noopener noreferrer"
+                  class="btn-link">Documentation →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Other Projects Subsection -->
+        <div class="other-projects-section reveal">
+          <h3 class="other-projects-title">Other Focused Projects</h3>
+          <div class="other-projects-grid" id="otherProjectsGrid">
+            <!-- Hydrated via data/portfolio.js -->
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS -->
-  <section class="section skills" id="skills">
-    <div class="container">
-      <div class="section-label reveal">02 &mdash; Skills</div>
-      <h2 class="section-title reveal">Tech Stack</h2>
-      <div class="skills-grid">
-
-        <div class="skill-card reveal">
-          <h3>Languages</h3>
-          <div class="skill-tags">
-            <span class="tag">C++</span>
-            <span class="tag">Python</span>
-            <span class="tag tag-muted">Java (Basic)</span>
-          </div>
+    <!-- SKILLS SECTION -->
+    <section class="section section-alt skills" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">03 — Capabilities</span>
+          <h2 class="section-title">Technical Skills &amp; Practice</h2>
+          <p class="section-subtitle">
+            Categorized strictly from real implementation: production-tested tools separated from areas under active
+            development.
+          </p>
         </div>
 
-        <div class="skill-card reveal">
-          <h3>Core Strengths</h3>
-          <div class="skill-tags">
-            <span class="tag">Logic Building</span>
-            <span class="tag">Problem Solving</span>
-            <span class="tag">OOP</span>
+        <div class="skills-layout">
+          <!-- Production & Deployed Skills -->
+          <div class="skills-column">
+            <div class="skills-group-header reveal">
+              <h3 class="group-title">Production &amp; Systems Deployed</h3>
+              <p class="group-desc">Technologies and architecture patterns used across deployed client systems.</p>
+            </div>
+            <div class="skills-categories-grid" id="skillsProductionGrid">
+              <!-- Hydrated via data/portfolio.js -->
+            </div>
           </div>
-        </div>
 
-        <div class="skill-card reveal">
-          <h3>Machine Learning</h3>
-          <div class="skill-tags">
-            <span class="tag">NumPy</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">Data Preprocessing</span>
-            <span class="tag">Gradient Descent</span>
-            <span class="tag">Models from Scratch</span>
-          </div>
-        </div>
-
-        <div class="skill-card reveal">
-          <h3>Tools</h3>
-          <div class="skill-tags">
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">VS Code</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section projects" id="projects">
-    <div class="container">
-      <div class="section-label reveal">03 &mdash; Projects</div>
-      <div class="projects-header reveal">
-        <h2 class="section-title">Selected Work</h2>
-      </div>
-
-      <div class="projects-grid" id="projectsGrid">
-
-        <div class="project-card reveal">
-          <div class="project-num">01</div>
-          <h3 class="project-title">ML Model from Scratch</h3>
-          <p class="project-desc">Built core Machine Learning algorithms like Linear Regression and Gradient Descent purely from scratch using NumPy to deeply understand their mathematical foundations.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">NumPy</span>
-            <span class="tech-badge">Linear Algebra</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/rai-umais/Machine-Learning-Practice-and-Problems" target="_blank" class="project-link">Source Code →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-num">02</div>
-          <h3 class="project-title">Collabify</h3>
-          <p class="project-desc">A Blend of Upwork and Jira, where the Clients and Freelancers interact, build and manage project flow, and Admin manages the platform.</p>
-          <div class="project-tech">
-            <span class="tech-badge">JAVA - Spring_boot</span>
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">PostgreSQL</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Collabify-Project/Kollabify" target="_blank" class="project-link">Source Code →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-num">03</div>
-          <h3 class="project-title">QR-Attendance System</h3>
-          <p class="project-desc">A fast, robust and proxy free QR based attendance system, where the QR refreshes every 25 second and the students can seamlessly mark there attendance in a few seconds. Only requirement: A good internet.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Flask</span>
-            <span class="tech-badge">PostgreSQL</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/rai-umais/QR_Automated_Attendance_System" target="_blank" class="project-link">Source Code →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-num">04</div>
-          <h3 class="project-title">VORTX Game Store</h3>
-          <p class="project-desc">Built a functional Gaming marketplace, where you can upload a game and check the ratings, find the best match for you, see the top trending games and order one. Lets you experience a market with all types of games and no restrictions.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Node JS</span>
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">MSSQL</span>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-num">05</div>
-          <h3 class="project-title">MAKTAB ERP</h3>
-          <p class="project-desc">Engineered a Complete, functional ERP platform for educational institutions that helps them manage the acamdemic records, finance management,Faculty and staff management and Admission experiences .</p>
-          <div class="project-tech">
-            <span class="tech-badge">Python - FastAPI</span>
-            <span class="tech-badge">Node Js</span>
-            <span class="tech-badge">Redis</span>
-            <span class="tech-badge">Celery</span>
-            <span class="tech-badge">Alembic</span>
-            <span class="tech-badge">PostgreSQL</span>
-            <span class="tech-badge">Cloudflare</span>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="section education" id="education">
-    <div class="container">
-      <div class="section-label reveal">04 &mdash; Education</div>
-      <h2 class="section-title reveal">Academic Background</h2>
-      <div class="edu-timeline">
-        <div class="edu-card reveal">
-          <div class="edu-dot"></div>
-          <div class="edu-body">
-            <span class="edu-year">2023 &mdash; Present</span>
-            <h3 class="edu-degree">BS Software Engineering</h3>
-            <p class="edu-uni">FAST National University of Computer and Emerging Sciences</p>
-            <span class="edu-badge">Undergraduate · Sophomore</span>
+          <!-- Currently Implementing / Learning -->
+          <div class="skills-column">
+            <div class="skills-group-header reveal">
+              <h3 class="group-title">Currently Implementing (AI)</h3>
+              <p class="group-desc">Technologies actively being integrated into current production deliverables.</p>
+            </div>
+            <div class="learning-card reveal">
+              <ul class="learning-list" id="skillsLearningList">
+                <!-- Hydrated via data/portfolio.js -->
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="section-label reveal">05 &mdash; Contact</div>
-      <h2 class="section-title reveal">Let's Connect</h2>
-      <p class="contact-sub reveal">Open to collaborations, discussions, and new opportunities.</p>
-      <div class="contact-links reveal">
-        <a href="mailto:raiumaiskharal@gmail.com" class="contact-card">
-          <span class="contact-icon">✉</span>
-          <div>
-            <span class="contact-type">Email</span>
-            <span class="contact-val">raiumaiskharal@gmail.com</span>
+    <!-- EDUCATION SECTION -->
+    <section class="section education" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">04 — Education</span>
+          <h2 class="section-title">Academic Background</h2>
+        </div>
+
+        <div class="edu-timeline" id="educationContainer">
+          <!-- Hydrated via data/portfolio.js -->
+          <div class="edu-card reveal">
+            <div class="edu-timeline-marker" aria-hidden="true"></div>
+            <div class="edu-content">
+              <div class="edu-header">
+                <h3 class="edu-degree">Bachelor of Science in Software Engineering</h3>
+                <span class="badge-timeline">Expected July 2028</span>
+              </div>
+              <p class="edu-institution">FAST-NUCES, Lahore, Pakistan</p>
+              <div class="edu-meta">
+                <span class="badge-sem">Currently in 5th semester</span>
+              </div>
+            </div>
           </div>
-        </a>
-        <a href="https://github.com/rai-umais" target="_blank" class="contact-card">
-          <span class="contact-icon">⌥</span>
-          <div>
-            <span class="contact-type">GitHub</span>
-            <span class="contact-val">github.com/rai-umais</span>
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/in/rai-umais-9aa927246/" target="_blank" class="contact-card">
-          <span class="contact-icon">◈</span>
-          <div>
-            <span class="contact-type">LinkedIn</span>
-            <span class="contact-val">rai-umais-9aa927246</span>
-          </div>
-        </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ACHIEVEMENTS & TALKS -->
+    <section class="section section-alt achievements" id="achievements">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">05 — Activities &amp; Talks</span>
+          <h2 class="section-title">Achievements &amp; Community Speaking</h2>
+          <p class="section-subtitle">
+            Notable competitions, educational career guidance, and school community sessions.
+          </p>
+        </div>
+
+        <div class="achievements-grid" id="achievementsGrid">
+          <!-- Hydrated via data/portfolio.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME CALLOUT SECTION -->
+    <section class="section resume-callout" id="resume">
+      <div class="container">
+        <div class="resume-banner reveal">
+          <div class="resume-content">
+            <h2 class="resume-heading">Review the Full Curriculum Vitae</h2>
+            <p class="resume-desc">
+              Download the single source of truth document detailing software architecture, live client systems,
+              academic progress at FAST-NUCES, and technical proficiencies.
+            </p>
+          </div>
+          <div class="resume-action">
+            <a href="./Rai_Muhammad_Umais_CV_.pdf" class="btn-primary" download="Rai_Muhammad_Umais_CV.pdf"
+              target="_blank" rel="noopener noreferrer">
+              <svg class="icon-inline" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV (PDF)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">06 — Contact</span>
+          <h2 class="section-title">Let's Connect</h2>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-info reveal">
+            <p class="contact-lead">
+              I am open to discussions regarding full-stack software development, AI systems engineering, and client
+              collaborations.
+            </p>
+            <p class="contact-subtext">
+              Reach out directly through email, LinkedIn, or explore my open-source code on GitHub.
+            </p>
+
+            <div class="contact-links-grid" id="contactLinksContainer">
+              <!-- Hydrated via data/portfolio.js -->
+            </div>
+
+            <p class="contact-privacy-note">
+              Note: Contact information is protected; direct inquiries are welcomed via email and LinkedIn.
+            </p>
+          </div>
+
+          <div class="contact-action-box reveal">
+            <div class="direct-box">
+              <h3 class="direct-box-title">Start a Conversation</h3>
+              <p class="direct-box-desc">
+                Prefer email? Click below to send a message directly from your default mail client.
+              </p>
+              <a href="mailto:raiumaiskharal@gmail.com?subject=Inquiry%20regarding%20Software%20Engineering%20Role"
+                class="btn-primary" style="width: 100%; justify-content: center;">
+                <svg class="icon-inline" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Compose Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>Crafted with intention &nbsp;·&nbsp; Rai Muhammad Umais Kharal &nbsp;·&nbsp; <span id="year"></span></p>
+    <div class="container">
+      <div class="footer-content">
+        <p>© <span id="year">2026</span> Rai Muhammad Umais. All rights reserved.</p>
+        <p class="footer-mono">Crafted with semantic HTML5, modern CSS3 &amp; vanilla JS</p>
+      </div>
+    </div>
   </footer>
 
-  <!-- End of Sections -->
-
+  <!-- DATA & SCRIPTS -->
+  <!-- 1. Single typed data source of truth -->
+  <script src="./data/portfolio.js"></script>
+  <!-- 2. Main application script -->
   <script src="./js/main.js"></script>
 </body>
+
 </html>
